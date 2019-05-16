@@ -15,10 +15,11 @@
 // const state = 0;
 
 export default function(state = {},action){
-    //return state +=1
     switch(action.type){
         case 'MOVIES_LIST':
             return {...state,movies:action.payload}
+        case 'DIR_LIST':
+            return {...state,directors:action.payload}
         default:
             return state;
     }
